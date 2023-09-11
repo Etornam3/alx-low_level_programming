@@ -1,32 +1,43 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
-
+#include <stdio.h>           
 /**
- * main - Entry point
- * Return: Always 0
+ * main - print numbers in 3s separated by , space
+ *
+ * Return: (0)
+ *
  */
-
 int main(void)
+{       
+        int num1, num2, num3;
+        
+        num1 = '0';
+        num2 = '0';
+        num3 = '0';
+        
+        while (num1 <= '9')
+        {       
+                while (num2 <= '9')
+                {	
+		  	num3 = '0';	
+                        while (num3 <= '9')
+                        {       
+                                if (num1 < num2 && num2 < num3)
+				{
+					putchar(num1);
+					putchar(num2);
+					putchar(num3);
 
-{
-
-	int p, q;
-
-	for (p = 0; p <= 98; p++)
-	{	
-	for (q = p + 1; q <= 99; q++)
-	{
-	putchar((p / 10) + '0');
-	putchar((p % 10) + '0');
-	putchar(' ');
-	putchar((q / 10) + '0');
-	putchar((q % 10) + '0');
-	if (p == 98 && q == 99)
-	continue;
-	putchar(',');
-	putchar(' ')'
-	}
+					if (num1 != '7')
+					{
+                                      		putchar(',');
+						putchar(' ');
+					}
+				}
+				num3++;
+			}
+			num2++;
+		}
+		num1++;
+		num2 = '0'; 
 	}
 	putchar('\n');
 	return (0);
