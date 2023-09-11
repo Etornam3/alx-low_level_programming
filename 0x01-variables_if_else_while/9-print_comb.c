@@ -1,26 +1,22 @@
 #include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
-
+#include <ctype.h>
 /**
- * main - ENtry point
- * Return: Always 0 (Success)
- */
-
+*main - Prints all single digits with , and space followed by new line
+*
+*Return: returns 0
+*/
 int main(void)
-
 {
+	int digit;
 
-	int d;
+	for (digit = '0'; digit <= '9'; digit++)
+	{
+		putchar(digit);
+		if (digit == '9')
+			continue;
 
-	for (d = '0'; d <= '9'; d++)
-	{
-	putchar(d);
-	if (d != '9')
-	{
-	putchar(',');
-	putchar(',');
-	}
+		putchar(',');
+		putchar(' ');
 	}
 	putchar('\n');
 	return (0);
