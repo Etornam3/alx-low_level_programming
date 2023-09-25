@@ -3,17 +3,17 @@
 #include <string.h>
 
 /**
- * _strpbrk - searches a string for any of a set of bytes
- * @s: pointer to string
- * @accept: pointer to string
+ * _strstr - locates a substring
+ * @haystack: string pointer
+ * @needle: string
  *
- * Return: ponter byte in s that matches accept
+ * Return: pointer to located string
  */
 
-char *_strpbrk(char *s, char *accept)
+char *_strstr(char *haystack, char *needle)
 {
 	char *t;
 
-	t = strpbrk(s, accept);
+	t = strstr(haystack, needle);
 	return (t);
 }
